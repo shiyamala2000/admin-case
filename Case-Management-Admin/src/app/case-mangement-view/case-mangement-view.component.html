@@ -1,0 +1,119 @@
+<html>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<!-- <link href="//maxcdn.boo[tstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+<!--Poppins  -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<body>
+    <mat-drawer-container>
+        <mat-drawer-content class="Content-list">
+            <mat-card class="card">
+                <mat-card-header class="header">
+                    <mat-card-title class="title"><img src="assets/images/case-search.png">&nbsp;&nbsp;
+                        Case Management</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <mat-form-field class="input" appearance="outline"
+                                style="width:350px !important;margin-left:50px;">
+                                <input matInput placeholder="Case ID">
+                                <mat-hint align="start">*Case ID can be CustomerNo/PolicyNo/TransationNO
+                                    /ClaimNo/AgentNo or related</mat-hint>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <mat-form-field class="input" appearance="outline" style="width:350px !important;">
+                                <!-- <input matInput placeholder="Document Status"> -->
+                                <mat-select placeholder=" Select Document Status">
+                                    <mat-option value="option1">Active</mat-option>
+                                    <mat-option value="option2">Inactive</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </mat-card-content>
+                <mat-card-footer class="button-position">
+                    <button class="btn1"><i class="fa fa-search" aria-hidden="true">&nbsp;Search</i></button>
+                    &nbsp;
+                    <button class="btn2"><i class="fa fa-refresh" aria-hidden="true">&nbsp;Reset</i></button>
+                </mat-card-footer>
+            </mat-card>
+            <br><br><br>
+            <div *ngIf="caseData.length > 0">
+                <div class="row">
+                    <div class="col-lg-11">
+                        <div class="">
+                            <div class="table-responsive">
+
+                                <div style="max-height: 400px; overflow-y: auto;">
+                                    <table class="table project-list-table table-nowrap align-middle table-borderless">
+                                        <thead class="table-header">
+                                            <tr>
+                                                <th>Document Name</th>
+                                                <th>ProcessType</th>
+                                                <th>SubProcessType</th>
+                                                <th>Status</th>
+                                                <th>Due Date</th>
+                                                <th>Received Date</th>
+                                                <th>Follow Up</th>
+                                                <th>File Upload</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- <tr
+                                    *ngFor="let case of (filteredData.length > 0 ? filteredData : caseManagementVariable)">
+                                    <td>{{case.role}}</td>
+                                    <td>{{case.proposerName}}</td>
+                                    <td>{{case.documentName}}</td>
+                                    <td>{{case.docDueDate}}</td>
+                                    <td>
+                                        <span *ngIf="case.receivedStatus === 'NotReceived'" class="badge badge-danger rounded-pill d-inline" style="background: linear-gradient(to right, #ff9853, #fa2525); color: #fff;font-size: 10px;">NotReceived</span>
+                                        <span *ngIf="case.receivedStatus === 'Received'" class="badge badge-success rounded-pill d-inline" style="background: linear-gradient(to right, #00cc66, #009900); color: #fff;font-size: 10px;">Received</span>
+                                    </td>
+                                    <td>{{case.receivedDate}} </td>
+                                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <input mdbCheckbox- class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckChecked" [disabled]="case.receivedStatus === 'Received'"
+                                            [checked]=" case.receivedStatus === 'NotReceived'" />
+                                    </td>
+                                    <td>
+                                        <label for="fileInput" [class.disabled]="case.receivedStatus === 'Received'">
+                                            <img src="assets/images/file-upload.png" alt="Upload File" width="21"
+                                                height="21" (click)="fileInput.click()" />
+                                        </label>
+                                        <input #fileInput type="file" id="fileInput" style="display: none"
+                                            (change)="onFileSelected($event)" [disabled]="case.receivedStatus === 'Received'" />
+                                    </td>
+
+                                </tr> -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <footer class="bg-gradient">
+                    <div class="all-buttons">
+                        <button class="btn" (click)="openGenerateLetterDialog()">
+                            <img class="verify-icon" src="assets/images/letter-icon1.png" width="20" height="20" />
+                            Follow Up Letter
+                        </button>&nbsp;
+                        <!-- <button class="btn">
+                        <img class="verify-icon" src="assets/images/preview-eye-icon1.png" width="20" height="20" />
+                        Preview</button>&nbsp; -->
+                        <button class="btn">
+                            <img class="verify-icon" src="assets/images/doc-icon2.png" width="21" height="21" />
+                            Add Document
+                        </button>&nbsp;
+                    </div>
+                </footer>
+            </div>
+        </mat-drawer-content>
+    </mat-drawer-container>
+</body>

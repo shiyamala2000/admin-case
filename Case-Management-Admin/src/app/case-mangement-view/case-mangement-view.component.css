@@ -1,0 +1,133 @@
+
+.body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.Content-list {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    color: black;
+    padding-left: 100px;
+    padding-top: 20px;
+    padding-bottom: 200px;
+}
+
+.button-position {
+    padding-left: 700px;
+    padding-bottom: 10px;
+}
+
+.btn1 {
+    background-color: #3a6e3f;
+    color: white;
+    border: 8px;
+    /* padding: 4px 4px; */
+    cursor: pointer;
+    border-radius: 5px;
+    height: 30px;
+    font-size: 10px;
+
+}
+
+.btn2 {
+    background-color: #061b2e;
+    color: white;
+    border: 8px;
+    /* padding: 4px 4px; */
+    cursor: pointer;
+    border-radius: 5px;
+    height: 30px;
+    font-size: 10px;
+
+}
+
+.text {
+    font-family: 'Poppins', sans-serif;
+}
+
+.card {
+    width: 900px;
+    height:190px;
+}
+
+.title {
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(to right, rgb(188, 198, 250), rgb(140, 141, 146));
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.row {
+    display: flex;
+    /* height: 50px; */
+    /* justify-content: space-between; */
+    /* align-items: flex-end; */
+}
+
+.table-header {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/*----footer--- */
+footer {
+    /* position: fixed; */
+    bottom: 0;
+    height: 9%;
+    width: 100%;
+    background-color: #d0d0d4;
+    font-family: 'Poppins', sans-serif;
+    z-index: 1;
+    /* background: linear-gradient(to right, rgba(230, 13, 13, 0.979), rgb(252, 185, 2)); */
+}
+
+.all-buttons {
+    margin-bottom: 10px;
+    margin-left: 50px;
+    position: absolute;
+    bottom: 0;
+    /* right: 0; */
+    font-family: 'Poppins', sans-serif;
+}
+
+.all-buttons .btn {
+    font-size: 12px;
+}
+
+.btn {
+    /* background-color: #ef6d28; */
+    /* background: linear-gradient(to right, rgb(255, 94, 0), rgb(223, 135, 4)); */
+    /* background: linear-gradient(to right, rgb(150, 140, 127), rgb(111, 111, 131)); */
+    background: linear-gradient(to right, rgb(128, 126, 126), rgb(56, 56, 56));
+    /* background: black; */
+    color: white;
+}
+
+label.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
